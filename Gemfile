@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rake'
 gem 'ruby_motion_query'
-gem "ProMotion", "~> 2.0.0"
+gem "ProMotion", "~> 2.1.0"
 
 # Pretty printing
 #gem 'motion_print' 

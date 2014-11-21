@@ -2,7 +2,7 @@ class AppDelegate < PM::Delegate
   status_bar false, animation: :fade
 
   def on_load(app, options)
-    open RootScreen.new
+    open RootScreen.new(hide_nav_bar: true)
   end
 
   def application(application, willChangeStatusBarOrientation: new_orientation, duration: duration)

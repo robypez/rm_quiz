@@ -26,7 +26,7 @@ class RootScreen < PM::Screen
     rmq.append(UILabel, :section_label).get
 
     rmq(@section_button).on(:touch) do |sender| 
-        open s = SectionScreen.new(nav_bar: true)
+        open s = SectionTableScreen.new(nav_bar: true), animated: true
         # open SectionScreen
     end
 
@@ -35,7 +35,9 @@ class RootScreen < PM::Screen
     rmq.append(UILabel, :profile_label).get
 
     rmq(@profile_button).on(:touch) do |sender| 
-        sender.selected = !sender.selected?
+        open_modal SettingsScreen.new(nav_bar: true,
+        transition_style: UIModalTransitionStyleFlipHorizontal,
+        presentation_style: UIModalPresentationFormSheet)
     end   
 
     @error_button = rmq.append(UIButton, :error_button).get
@@ -46,7 +48,6 @@ class RootScreen < PM::Screen
         sender.selected = !sender.selected?
     end
     
-
   end
 
   def add_mask(element)

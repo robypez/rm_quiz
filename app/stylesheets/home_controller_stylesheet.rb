@@ -13,7 +13,7 @@ class HomeStylesheet < RubyMotionQuery::Stylesheet
 
   def logo_view(st)
     st.image = image.resource('logo')
-    st.frame = {l: 20, fr: 20, t:20, h: 130, centered: :horizontal}
+    st.frame = {l: 30, fr: 30, t:20, h: 130, centered: :horizontal}
   end
 
   def quiz_button(st)
