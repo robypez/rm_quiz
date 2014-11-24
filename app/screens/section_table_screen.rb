@@ -11,7 +11,7 @@ class SectionTableScreen < PM::TableScreen
   end
 
   def table_data
-    @data ||= [{
+    [{
       cells: sections.map do |section|
         {
           title: section[:title],
@@ -19,22 +19,22 @@ class SectionTableScreen < PM::TableScreen
           height: 80,
           cell_class: CustomTableCell,
           action: :tapped_cell,
-          arguments: {section: section[:id], row:2},
+          arguments: { section: section[:id], row: 2, },
+          properties: { selected: selected_sections.include?(section[:id]) },
           keep_selection: false,
-          image: { image: section[:image] }, 
+          image: { image: section[:image] },
         }
       end
     }]
   end
 
-  def tapped_cell(args={})
-    PM.logger.info args # => instance of State
-    if selected_sections.include? args[:section] 
+  def tapped_cell(args, index_path)
+    if selected_sections.include? args[:section]
       selected_sections.delete(args[:section])
     else
       selected_sections << args[:section]
     end
-    PM.logger.info selected_sections
+    update_table_data([ index_path ]) # Only update this index_path
   end
 
   def close_to_root
@@ -53,4 +53,4 @@ class SectionTableScreen < PM::TableScreen
     ]
   end
 
-end  
+end
