@@ -1,4 +1,5 @@
 class SectionTableScreen < PM::TableScreen
+  title "Scegli le sezioni"
 
   attr_accessor :selected_sections
 

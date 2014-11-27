@@ -31,7 +31,7 @@ PLATFORMS
 
 DEPENDENCIES
   ProMotion (~> 2.1.0)
-  bubble-wrap
+  bubble-wrap (~> 1.7.1)
   cdq
   rake
   ruby_motion_query

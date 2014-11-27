@@ -7,8 +7,7 @@ class SettingsScreen < PM::TableScreen
 
   def on_init
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone 
-    self.tableView.backgroundColor = UIColor.yellowColor
-    self.tableView.allowsMultipleSelection = true
+    self.tableView.backgroundColor = rmq.color.from_hex('#1c7ac4')
   end
 
   def table_data 
@@ -22,8 +21,40 @@ class SettingsScreen < PM::TableScreen
 
     [{
       title: "Generali",
-      title_view_height: 100,
+      # title_view_height: 100,
       cells: [
+        {
+          title: "Patente Oltre",
+          accessory: {
+            view: :switch,
+            value: true, # switched on
+            action: :foo
+          }
+        },
+        {
+          title: "Privilegia domande mai fatte",
+          accessory: {
+            view: :switch,
+            value: true, # switched on
+            action: :foo
+          }
+        },
+        {
+          title: "Privilegia errori",
+          accessory: {
+            view: :switch,
+            value: true, # switched on
+            action: :foo
+          }
+        },
+        {
+          title: "Mostra subito la risposta",
+          accessory: {
+            view: :switch,
+            value: true, # switched on
+            action: :foo
+          }
+        },
         {
           title: "Patente Oltre",
           accessory: {

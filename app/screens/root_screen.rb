@@ -1,7 +1,7 @@
 class RootScreen < PM::Screen
 
   # def will_appear
-  #   self.title = ""
+  #   self.navigationController.setNavigationBarHidden(true, animated: false)
   # end
 
   def preferredStatusBarStyle
@@ -26,7 +26,7 @@ class RootScreen < PM::Screen
     rmq.append(UILabel, :section_label).get
 
     rmq(@section_button).on(:touch) do |sender| 
-        open s = SectionTableScreen.new(nav_bar: true), animated: true
+        open s = SectionTableScreen.new(nav_bar: true, hide_nav_bar: false), animated: true
         # open SectionScreen
     end
 

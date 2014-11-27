@@ -20,4 +20,4 @@ gem 'cdq'
 #gem 'afmotion' 
 
 # Useful tools 
-gem 'bubble-wrap' 
+gem "bubble-wrap", "~> 1.7.1" 
