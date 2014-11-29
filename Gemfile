@@ -17,7 +17,7 @@ gem "ProMotion", "~> 2.1.0"
 gem 'cdq' 
 
 # If you need to access the network, use AFMotion; it uses AFNetworking
-#gem 'afmotion' 
+gem 'afmotion' 
 
 # Useful tools 
 gem "bubble-wrap", "~> 1.7.1" 
